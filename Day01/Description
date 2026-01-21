@@ -1,0 +1,104 @@
+This project marks Day 01 of my 30-day Python coding challenge, where I aim to strengthen my Python programming skills by practicing daily coding exercises.
+
+On this day, I focused on Python fundamentals, including variables, data types, strings, lists, tuples, dictionaries, sets, conditional statements, loops, functions, and recursion. The goal is to cover essential Python concepts while also practicing problem-solving with small algorithms.
+
+Theory Covered – Day 01
+1. Printing & Variables
+
+print() is used to display output.
+
+Variables store data like integers, strings, or floats:
+
+age = 23
+name = "Ahmed"
+
+2. Data Types
+
+String: Sequence of characters "Hello"
+
+Integer: Whole numbers 23
+
+Float: Decimal numbers 44.5
+
+List: Ordered collection [1, 2, 3]
+
+Tuple: Immutable ordered collection (1, 2, 3)
+
+Dictionary: Key-value pairs {"Name":"Ahmed", "Age":23}
+
+Set: Unordered collection of unique elements {1,2,3}
+
+3. String Operations
+
+Indexing: name[1:4] → Access substring
+
+Methods: .lower(), .count(), len()
+
+4. List, Tuple, and Dictionary Operations
+
+Access elements by index: list[1], tuple[3]
+
+Nested dictionaries: DICT["Subjects"]["PHY"]
+
+Methods like .items(), .keys() for dictionaries
+
+5. Set Operations
+
+union(), intersection(), pop()
+
+Sets automatically remove duplicates
+
+6. Input & Type Conversion
+
+input() receives user input as a string
+
+Convert with int(), float() as needed
+
+7. Conditional Statements
+
+if, else to perform decisions:
+
+if age > 18:
+    print("Can Drive")
+else:
+    print("Cannot Drive")
+
+8. Loops
+
+While Loop: Repeats while condition is True
+
+For Loop: Iterates over a list or set
+
+9. Functions
+
+Functions allow code reuse:
+
+def Driving(age):
+    if age > 18:
+        return "You can drive"
+    else:
+        return "You cannot drive"
+
+10. Recursion
+
+Function calling itself to solve problems:
+
+Power calculation: x^n
+
+Count occurrences in a list
+
+Check palindrome
+
+Factorial
+
+11. Algorithms Practiced
+
+Prime number check
+
+Vowel and consonant count
+
+Max & Min of three numbers
+
+Sum & product of list numbers
+
+Palindrome check for string/list
