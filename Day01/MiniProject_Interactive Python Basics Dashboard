@@ -1,0 +1,145 @@
+# Interactive Python Basics Dashboard
+
+def string_tools():
+    while True:
+        print("\n--- String Tools ---")
+        print("1. Count vowels")
+        print("2. Reverse string")
+        print("3. Check palindrome")
+        print("4. Back to main menu")
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            s = input("Enter a string: ")
+            count = sum(1 for c in s.lower() if c in "aeiou")
+            print(f"Number of vowels: {count}")
+        elif choice == "2":
+            s = input("Enter a string: ")
+            print(f"Reversed string: {s[::-1]}")
+        elif choice == "3":
+            s = input("Enter a string: ")
+            if s == s[::-1]:
+                print("It is a palindrome!")
+            else:
+                print("Not a palindrome.")
+        elif choice == "4":
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+def list_tools():
+    while True:
+        print("\n--- List Tools ---")
+        print("1. Sum of list")
+        print("2. Product of list")
+        print("3. Find maximum")
+        print("4. Back to main menu")
+        choice = input("Enter your choice: ")
+        
+        if choice in ["1", "2", "3"]:
+            lst = input("Enter numbers separated by space: ").split()
+            lst = [int(x) for x in lst]
+            
+            if choice == "1":
+                print(f"Sum of list: {sum(lst)}")
+            elif choice == "2":
+                prod = 1
+                for x in lst:
+                    prod *= x
+                print(f"Product of list: {prod}")
+            elif choice == "3":
+                print(f"Maximum number: {max(lst)}")
+        elif choice == "4":
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+def dict_tools():
+    my_dict = {
+        "Name": "Ahmed",
+        "RollNo": 21,
+        "Class": "BS",
+        "Subjects": {"PHY": 23, "BIO": 25}
+    }
+    
+    while True:
+        print("\n--- Dictionary Tools ---")
+        print("1. Show keys")
+        print("2. Show values")
+        print("3. Show items")
+        print("4. Access nested value")
+        print("5. Back to main menu")
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            print("Keys:", my_dict.keys())
+        elif choice == "2":
+            print("Values:", my_dict.values())
+        elif choice == "3":
+            print("Items:", my_dict.items())
+        elif choice == "4":
+            key = input("Enter nested key (PHY/BIO): ")
+            print(f"Value: {my_dict['Subjects'].get(key, 'Key not found')}")
+        elif choice == "5":
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+def recursion_tools():
+    def factorial(n):
+        if n == 0 or n == 1:
+            return 1
+        return n * factorial(n-1)
+    
+    def power(x, n):
+        if n == 0:
+            return 1
+        return x * power(x, n-1)
+    
+    while True:
+        print("\n--- Recursion Tools ---")
+        print("1. Factorial")
+        print("2. Power (x^n)")
+        print("3. Back to main menu")
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            num = int(input("Enter a number: "))
+            print(f"Factorial: {factorial(num)}")
+        elif choice == "2":
+            x = int(input("Enter base x: "))
+            n = int(input("Enter exponent n: "))
+            print(f"Result: {power(x, n)}")
+        elif choice == "3":
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+# Main Dashboard
+def main():
+    while True:
+        print("\n=== Python Basics Dashboard ===")
+        print("1. String tools")
+        print("2. List tools")
+        print("3. Dictionary tools")
+        print("4. Recursion tools")
+        print("5. Exit")
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            string_tools()
+        elif choice == "2":
+            list_tools()
+        elif choice == "3":
+            dict_tools()
+        elif choice == "4":
+            recursion_tools()
+        elif choice == "5":
+            print("Exiting dashboard. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+# Run the dashboard
+if __name__ == "__main__":
+    main()
